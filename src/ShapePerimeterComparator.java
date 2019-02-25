@@ -33,7 +33,18 @@ public class ShapePerimeterComparator implements Comparator<Shape>
 	public int compare(Shape s1, Shape s2)
 	{
 		// TODO: complete this...
-		int result = s1.getPerimeter().compareTo(s2.getPerimeter());
+		int result = 0;
+		// TODO: complete this...
+		if(s1.getPerimeter() < s2.getPerimeter()) {
+			result = -1;
+		}
+		else if(s1.getPerimeter() > s2.getPerimeter()) {
+			result = 1;
+		}
+		else {
+			result = 0;
+		}
+	return result;
 	}
 
 	/**
