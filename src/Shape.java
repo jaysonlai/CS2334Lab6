@@ -96,12 +96,31 @@ public abstract class Shape implements Comparable<Shape>
 	public int compareTo(Shape s)
 	{
 		// TODO: complete this...
-		int result = 0;
+		int result=0;
+		if(this.getArea() > s.getArea()) {
+			 result =1;
 		
-		result = compare(Shape(getShapeType().getPerimeter(),s.getPerimeter());
+		}
 		
+		else if(this.getArea() < s.getArea()) {
+		 result = -1;
+		
+		}
+		
+		else if(this.getArea() == s.getArea()) {
+			if(this.getPerimeter() > s.getPerimeter()) {
+				 result = -1; 
+			}
+			if(this.getPerimeter() < s.getPerimeter()) {
+			 result = -1;
+		}
+			if(this.getPerimeter() == s.getPerimeter()) {
+				 result = 0;
+			}
+		}
 		return result;
 	}
+	
 
 	/**
 	 * Gets the shape's id.
@@ -135,5 +154,6 @@ public abstract class Shape implements Comparable<Shape>
 	public String toString()
 	{
 		// TODO: complete this...
+		return String.format("%s\t ID = <<id>>\t area = <<area rounded to 3 decimals>>\t perimeter = <<perimeter rounded to 3 decimals>>",getShapeType());
 	}
 }
