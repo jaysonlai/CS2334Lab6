@@ -43,6 +43,7 @@ public class ShapeSorterTest
 	public void SortShapesDefaultTest()
 	{
 		// TODO: complete this...
+		sorter.sortShape();
 	}
 
 	/**
