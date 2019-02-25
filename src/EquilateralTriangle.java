@@ -22,6 +22,7 @@ public class EquilateralTriangle extends Polygon
 	public EquilateralTriangle(String id, double sideLength)
 	{
 		// TODO: complete this...
+		
 	}
 
 	/**

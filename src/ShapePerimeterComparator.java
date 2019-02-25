@@ -33,6 +33,7 @@ public class ShapePerimeterComparator implements Comparator<Shape>
 	public int compare(Shape s1, Shape s2)
 	{
 		// TODO: complete this...
+		int result = s1.getPerimeter().compareTo(s2.getPerimeter());
 	}
 
 	/**
@@ -43,7 +44,7 @@ public class ShapePerimeterComparator implements Comparator<Shape>
      * @param s2 The second shape to be compared.
      * @return True if the shapes are effectively equal, False if they do not.
 	 */
-	*****public boolean equals(Shape s1, Shape s2)
+	public boolean equals(Shape s1, Shape s2)
 	{
 		// TODO: complete this...
 		return compare(s1,s2) == 0;

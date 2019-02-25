@@ -98,7 +98,7 @@ public abstract class Shape implements Comparable<Shape>
 		// TODO: complete this...
 		int result = 0;
 		
-		result = compare(Shape(this.id).getPerimeter(),s.getPerimeter());
+		result = compare(Shape(getShapeType().getPerimeter(),s.getPerimeter());
 		
 		return result;
 	}
