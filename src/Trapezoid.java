@@ -30,9 +30,14 @@ public class Trapezoid extends Polygon
 		// TODO: complete this...
 		super(id);
 		this.leftSide = leftSide;
+		sideLengths.add(leftSide);
 		this.rightSide = rightSide;
+		sideLengths.add(rightSide);
 		this.topBase = topBase;
+		sideLengths.add(topBase);
 		this.bottomBase = bottomBase;
+		sideLengths.add(bottomBase);
+
 	}
 
 	/**

@@ -12,6 +12,12 @@ public class Rectangle extends Polygon {
 		super(id);
 		this.length = length;
 		this.width = width;
+		sideLengths.add(length);
+		sideLengths.add(length);
+		sideLengths.add(width);
+		sideLengths.add(width);
+
+
 	}
 	@Override
 	public double getArea() {
@@ -19,9 +25,7 @@ public class Rectangle extends Polygon {
 		return length*width;
 	}
 	
-	public double getPerimeter() {
-		return length+length+width+width;
-	}
+	
 
 	@Override
 	public String getShapeType() {

@@ -21,7 +21,8 @@ public abstract class Polygon extends Shape
     public Polygon(String id)
     {
         super(id);
-        sideLengths = new ArrayList<Double>();
+        this.sideLengths = new ArrayList<Double>();
+        
     }
 
     /**
