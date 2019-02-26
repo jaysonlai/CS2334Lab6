@@ -18,6 +18,10 @@ public class Rectangle extends Polygon {
 		// TODO Auto-generated method stub
 		return length*width;
 	}
+	
+	public double getPerimeter() {
+		return length+length+width+width;
+	}
 
 	@Override
 	public String getShapeType() {
