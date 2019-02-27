@@ -53,11 +53,14 @@ public class ShapeSorterTest
 		Shape d = new Circle("test4", 1.5);
 		
 		sorter.sortShapes();
-		
-		Assert.assertEquals(b, sorter.shapes.get(0));
+		sorter.addShape(c);
+		sorter.addShape(a);
+		sorter.addShape(d);
+		sorter.addShape(b);
+		Assert.assertEquals(c, sorter.shapes.get(0));
 		Assert.assertEquals(a, sorter.shapes.get(1));
 		Assert.assertEquals(d, sorter.shapes.get(2));
-		Assert.assertEquals(c, sorter.shapes.get(3));		
+		Assert.assertEquals(b, sorter.shapes.get(3));		
 		
 	}
 
@@ -77,10 +80,14 @@ public class ShapeSorterTest
 		
 		sorter.sortShapes(new ShapeAreaComparator());
 		
-		Assert.assertEquals(b, sorter.shapes.get(0));
+		sorter.addShape(c);
+		sorter.addShape(a);
+		sorter.addShape(d);
+		sorter.addShape(b);
+		Assert.assertEquals(c, sorter.shapes.get(0));
 		Assert.assertEquals(a, sorter.shapes.get(1));
 		Assert.assertEquals(d, sorter.shapes.get(2));
-		Assert.assertEquals(c, sorter.shapes.get(3));		
+		Assert.assertEquals(b, sorter.shapes.get(3));		
 	}
 
 	/**
@@ -92,16 +99,20 @@ public class ShapeSorterTest
 		// TODO: complete this...ShapeSorter sorter = new ShapeSorter();
 		ShapeSorter sorter = new ShapeSorter();
 
-		Shape a = new Trapezoid("test", 3, 3,4,5);
-		Shape b = new EquilateralTriangle("test2", 4);
-		Shape c = new Ellipse("test3", 3,9);
-		Shape d = new Circle("test4", 1.5);
+		Shape a = new Trapezoid("test", 3,3,3,3);
+		Shape b = new Square("test2", 4);
+		Shape c = new Circle("test3", 6);
+		Shape d = new EquilateralTriangle("test4", 8);
 		
+		sorter.addShape(c);
+		sorter.addShape(a);
+		sorter.addShape(d);
+		sorter.addShape(b);
 		sorter.sortShapes(new ShapePerimeterComparator());
 		
-		Assert.assertEquals(b, sorter.shapes.get(0));
+		Assert.assertEquals(d, sorter.shapes.get(0));
 		Assert.assertEquals(a, sorter.shapes.get(1));
-		Assert.assertEquals(d, sorter.shapes.get(2));
+		Assert.assertEquals(b, sorter.shapes.get(2));
 		Assert.assertEquals(c, sorter.shapes.get(3));	
 	}
 
@@ -112,7 +123,15 @@ public class ShapeSorterTest
 	public void ToStringTest()
 	{
 		// TODO: complete this...
-		String.format("",);
+		ShapeSorter sorter = new ShapeSorter();
+		Shape s1 = new Square("first",1.0);
+		Shape s2 = new Rectangle("second",3.0,2.0);
+		
+		sorter.addShape(s1);
+		sorter.addShape(s2);
+		
+		Assert.assertEquals("[Square:	 ID = first	 area = 1.000	 perimeter = 4.000, Rectangle:	 ID = second	 area = 6.000	 perimeter = 10.000]", sorter.toString());
+		
 
 	}
 }
