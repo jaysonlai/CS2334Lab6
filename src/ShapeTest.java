@@ -188,6 +188,10 @@ public class ShapeTest
 		Shape rect = new Rectangle("x1", 9.0, 4.0);
 		Shape sq1 = new Square("y1", 6.0);
 		Shape sq2 = new Square("z1", 6.0);
+		Shape rect2 = new Rectangle("x2", 9.0, 9.0);
+		
+		Assert.assertEquals("CompareTest should find shapes inequal", 1, rect2.compareTo(rect));
+		Assert.assertEquals("CompareTest should find shapes inequal", -1, rect.compareTo(rect2));		
 		Assert.assertEquals("CompareTest should find shapes equal", 0,sq2.compareTo(sq1));
 		Assert.assertEquals("CompareTest found shapes inequal", -1, sq1.compareTo(rect));
 		Assert.assertEquals("CompareTest found shapes inequal", 1,rect.compareTo(sq2));
