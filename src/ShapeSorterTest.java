@@ -110,9 +110,9 @@ public class ShapeSorterTest
 		sorter.addShape(b);
 		sorter.sortShapes(new ShapePerimeterComparator());
 		
-		Assert.assertEquals(d, sorter.shapes.get(0));
-		Assert.assertEquals(a, sorter.shapes.get(1));
-		Assert.assertEquals(b, sorter.shapes.get(2));
+		Assert.assertEquals(a, sorter.shapes.get(0));
+		Assert.assertEquals(b, sorter.shapes.get(1));
+		Assert.assertEquals(d, sorter.shapes.get(2));
 		Assert.assertEquals(c, sorter.shapes.get(3));	
 	}
 

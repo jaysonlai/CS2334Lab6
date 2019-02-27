@@ -1,13 +1,11 @@
 
 public class Square extends Rectangle {
-	private double length;
 
 	
 	public Square(String id, double length)
 	{
 		// TODO: complete this...
-		super(id, length,length);
-		this.length = length;
+		super(id,length,length);
 	}
 	
 
